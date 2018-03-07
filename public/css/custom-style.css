@@ -91,6 +91,14 @@ header {
     cursor: pointer;
     display: block;
 }
+.search input[type="text"] {
+    width: 350px;
+    height: 45px;
+    padding-left: 17px;
+}
+.search .glyphicon-search {
+    right: 30px;
+}
 .copyright p {
     margin: 0px;
 }

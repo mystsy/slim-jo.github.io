@@ -4,6 +4,7 @@ import Home from './components/Home.js'
 import About from './components/About.js'
 
 // Collection
+import All from './components/All.js';
 import Business from './components/Business.js';
 import Travel from './components/Travel.js';
 import Tech from './components/Tech.js';
@@ -32,6 +33,7 @@ render() {
         <ul className="nav nav-pills nav-justified">
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Collection <span class="caret"></span></a>
           <ul class="dropdown-menu">
+            <li><Link to="/All">All</Link></li>
             <li><Link to="/Business">Business</Link></li>
             <li><Link to="/Travel">Travel</Link></li>
             <li><Link to="/Tech">Tech</Link></li>
@@ -45,6 +47,7 @@ render() {
         </ul>
 
         <div>
+            <Route path="/All" component={All}/>
             <Route path="/Business" component={Business}/>
             <Route path="/Travel" component={Travel}/>
             <Route path="/Tech" component={Tech}/>
@@ -85,6 +88,11 @@ render() {
                     <a href="http://instagram.com/slimjogoods" target="_blank"><i className="fa fa-instagram"></i></a>
                     <a href="#"><i className="fa fa-facebook"></i></a>
                     <a href="#"><i className="fa fa-twitter"></i></a>
+                </div>
+                <div className="search">
+                  <p>Search products.</p>
+                  <br/>
+                  <input type="text" placeholder="Input keywords here" /><span class="glyphicon glyphicon-search"></span>
                 </div>
             </div>
         </div>
